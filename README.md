@@ -121,27 +121,11 @@ RegistroEmpleadosExamen1/
 ### 7. Listado después de eliminar
 ![Confirmación](Capturas/07-Confirmacion.png)
 
-## Instalación y ejecución
-
-1. Clonar el repositorio:
-
-   ```bash
-   git clone https://github.com/gilmartinez557gm-glitch/RegistroEmpleadosExamen1.git
-   ```
-
-2. Abrir el archivo de solución en Visual Studio.
-
-3. Restaurar los paquetes NuGet.
-
-4. Seleccionar un emulador o dispositivo compatible con .NET MAUI.
-
-5. Ejecutar la aplicación.
-
 ## Autor
 
 **Gil David Martinez**
 
-Proyecto académico – Ingeniería en Sistemas Computacionales.
+Examen del primer parcial de la materia de **Programación de Aplicaciones Móviles II**.
 
 ---
 
