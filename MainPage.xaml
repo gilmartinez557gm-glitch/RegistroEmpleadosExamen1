@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:RegistroEmpleadosExamen1.Models"
+    x:Class="RegistroEmpleadosExamen1.MainPage"
+    Title="Registro de Empleados"
+    BackgroundColor="#F5F5FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label
+                Text="GESTIÓN DE EMPLEADOS"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#4F378B"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Información del empleado"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="#4F378B"/>
+
+            <Entry
+                x:Name="txtNombres"
+                Placeholder="Nombres"
+                TextColor="#4F378B"/>
+
+            <Entry
+                x:Name="txtApellidos"
+                Placeholder="Apellidos"
+                TextColor="#4F378B"/>
+
+            <Entry
+                x:Name="txtPuesto"
+                Placeholder="Puesto"
+                TextColor="#4F378B"/>
+
+            <Entry
+                x:Name="txtSalario"
+                Placeholder="Salario"
+                Keyboard="Numeric"
+                TextColor="#4F378B"/>
+
+            <Entry
+                x:Name="txtCorreo"
+                Placeholder="Correo electrónico"
+                Keyboard="Email"
+                TextColor="#4F378B"/>
+
+            <Label Text="Fecha de ingreso"
+                TextColor="#4F378B"/>
+
+            <DatePicker
+                x:Name="dpFechaIngreso"
+                Format="dd/MM/yyyy"
+                TextColor="#4F378B"/>
+
+            <Label
+                x:Name="lblId"
+                Text="Nuevo empleado"
+                FontSize="12"
+                TextColor="Gray"/>
+
+            <Button
+                x:Name="btnGuardar"
+                Text="Guardar empleado"
+                BackgroundColor="#6650A4"
+                TextColor="White"
+                Clicked="Guardar_Clicked"/>
+
+            <Button
+                Text="Actualizar empleado"
+                BackgroundColor="#386A8F"
+                TextColor="White"
+                Clicked="Actualizar_Clicked"/>
+
+            <Button
+                Text="Eliminar empleado"
+                BackgroundColor="#B3261E"
+                TextColor="White"
+                Clicked="Eliminar_Clicked"/>
+
+            <Button
+                Text="Limpiar formulario"
+                BackgroundColor="#79747E"
+                TextColor="White"
+                Clicked="Limpiar_Clicked"/>
+
+            <BoxView
+                HeightRequest="1"
+                Color="#CCCCCC"
+                Margin="0,10"/>
+
+            <Label
+                Text="Empleados registrados"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#4F378B"/>
+
+            <Label
+                x:Name="lblTotal"
+                Text="Total de empleados: 0"
+                FontSize="13"
+                TextColor="Gray"/>
+
+            <ListView
+                x:Name="lvEmpleados"
+                HasUnevenRows="True"
+                SeparatorVisibility="Default"
+                SelectionMode="Single"
+                ItemSelected="lvEmpleados_ItemSelected"
+                HeightRequest="400">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Grid
+                                Padding="12"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="Auto,Auto,Auto,Auto">
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Text="{Binding Id, StringFormat='ID: {0}'}"
+                                    FontSize="12"
+                                    TextColor="Gray"/>
+
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Text="{Binding Nombres, StringFormat='Nombre: {0}'}"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    TextColor="#4F378B"/>           
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Text="{Binding Apellidos}"
+                                    FontSize="14"/>
+
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    Text="{Binding Puesto}"
+                                    FontSize="13"
+                                    TextColor="Gray"/>
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Grid.RowSpan="4"
+                                    Text="{Binding Salario, StringFormat='L. {0:N2}'}"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Center"
+                                    TextColor="Green"/>
+
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
