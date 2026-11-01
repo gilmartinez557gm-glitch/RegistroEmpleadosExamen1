@@ -125,7 +125,7 @@ RegistroEmpleadosExamen1/
 
 **Gil David Martinez**
 
-Examen del primer parcial de la materia de **Programación de Aplicaciones Móviles II**.
+Examen del primer parcial de la materia de **Programación de Dsipositivos Móviles II**.
 
 ---
 
